@@ -10,20 +10,22 @@
  * 
   */
 
-const multiplyByTwo = (array) => {}
+const multiplyByTwo = (array) => {
+  return array.map((value) => value * 2);
+}
 
 
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
- * retourne un nouveau tableau avec uniquement les nom qui commencent par la lettre "A"
+ * retourne un nouveau tableau avec uniquement les noms qui commencent par la lettre "A"
  * 
  * contraintes: 
- *   - Les mots clées for, while, do while sont interdits
- *   - les mots clées function et return sont interdits
+ *   - Les mots clés for, while, do while sont interdits
+ *   - les mots clés function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
-  */
+ */
 
-const filterNameStartByA = (array) => {}
+const filterNameStartByA = (array) => array.filter((name) => name.startsWith('A'));
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -35,7 +37,7 @@ const filterNameStartByA = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = (array) => {}
+const sum = (array) => array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -51,12 +53,12 @@ const sum = (array) => {}
  * retour attendu: "Foo"
  * 
  * contraintes: 
- *   - Les mots clées for, while, do while sont interdits
- *   - les mots clées function et return sont interdits
+ *   - Les mots clés for, while, do while sont interdits
+ *   - les mots clés function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => {}
+const findUserById = (array, id) => array.find((user) => user.id === id);
 
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
