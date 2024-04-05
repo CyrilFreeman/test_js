@@ -1,21 +1,23 @@
 
 /**
- * utilisez l'opérateur de chaine ?. pour accéder au nom du groupe auquel appartient l'utilisateur
- * Attention, l'utilisateur peut ne pas avoir de groupe (null)
- * renvoi undefined si l'utilisateur n'a pas de groupe
+ * Utilize the optional chaining operator ?. to access the name of the group to which the user belongs
+ * Note that the user may not have a group (null)
+ * Return undefined if the user has no group
  * 
- * exemple : 
+ * Example: 
  * {
- *  name: "John",
- *    group: {
- *      name: "admin"
- *    }
- *  }
+ *   name: "John",
+ *   group: {
+ *     name: "admin"
+ *   }
+ * }
  * 
- * doit renvoyer "admin"
+ * Should return "admin"
  * 
  */
 
-const getGroupName = (obj) => {}
+const getGroupName = (obj) => {
+    return obj?.group?.name;
+}
 
 module.exports = {getGroupName};
